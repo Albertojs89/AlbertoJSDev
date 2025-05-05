@@ -1,10 +1,11 @@
 function Sidebar({ setHoveredSection }) {
   const links = [
-    { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
+    { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
     { id: 'contact', label: 'Contact' },
   ];
+
 
   const scrollTo = (id) => {
     const el = document.getElementById(id);
