@@ -34,7 +34,7 @@ function Layout({ children }) {
       <Sidebar setHoveredSection={setHoveredSection} />
 
       {/* Texto grande de fondo */}
-      <div className="pointer-events-none fixed left-[15%] top-1/3 transform -translate-y-1/2 z-0">
+      <div className="pointer-events-none fixed left-[10%] top-1/3 transform -translate-y-1/2 z-0">
         <h1
           className={`text-[16vw] font-bold uppercase tracking-widest text-[#ccd6f6]/5 transition-all duration-500 transform
             ${hoveredSection ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'}`}
@@ -45,7 +45,8 @@ function Layout({ children }) {
 
 
 
-      <main className="relative z-10 pt-32 px-8 lg:pl-48 max-w-5xl mx-auto space-y-32">
+      <main className="relative z-10 pt-32 px-8 lg:px-32 max-w-5xl mx-auto space-y-32">
+
         {children}
       </main>
     </div>
