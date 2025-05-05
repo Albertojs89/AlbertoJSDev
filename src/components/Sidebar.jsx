@@ -1,11 +1,10 @@
-function Sidebar({ setHoveredSection }) {
+function Sidebar({ setHoveredSection, activeSection }) {
   const links = [
     { id: 'about', label: 'About' },
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
     { id: 'contact', label: 'Contact' },
   ];
-
 
   const scrollTo = (id) => {
     const el = document.getElementById(id);
@@ -26,13 +25,17 @@ function Sidebar({ setHoveredSection }) {
             onClick={() => scrollTo(link.id)}
             onMouseEnter={() => setHoveredSection(link.label)}
             onMouseLeave={() => setHoveredSection(null)}
-            className="relative pl-4 text-left group hover:text-[#64ffda] transition-colors"
+            className={`relative pl-4 text-left group transition-colors duration-300 ${
+              activeSection === link.id ? 'text-[#64ffda]' : 'hover:text-[#64ffda]'
+            }`}
           >
             {link.label}
-           <span
-  className="absolute left-0 -bottom-1 h-[1px] w-0 bg-[#64ffda] transition-all duration-300 group-hover:w-12"
-/>
 
+            {/* Línea horizontal (hover o activa) */}
+            <span
+              className={`absolute left-0 -bottom-1 h-[1px] bg-[#64ffda] transition-all duration-300 
+                ${activeSection === link.id ? 'w-12' : 'w-0'} group-hover:w-12`}
+            />
           </button>
         ))}
       </div>
