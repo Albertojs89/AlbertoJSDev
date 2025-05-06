@@ -11,7 +11,7 @@ function About() {
       data-aos="fade-up"
     >
       {/* Ilustraciones lado a lado más grandes y más juntas */}
-      <div className="flex flex-wrap gap-6 justify-center mb-10 mt-4">
+      <div className="flex flex-wrap gap-6 justify-center mb-15 ">
         {/* Imagen Frontend */}
         <div
           onClick={() => setSelected('frontend')}

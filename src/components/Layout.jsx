@@ -16,32 +16,40 @@ function Layout({ children }) {
     });
   }, []);
 
-  // Observer para detectar qué sección está en el viewport
+  // IntersectionObserver mejorado para detectar secciones
   useEffect(() => {
-    const sections = document.querySelectorAll('section[id]');
+    const sectionElements = document.querySelectorAll('section[id], #projects-anchor');
+
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
+        const sorted = entries
+          .filter(entry => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        if (sorted.length > 0) {
+          const id = sorted[0].target.id === 'projects-anchor' ? 'projects' : sorted[0].target.id;
+          setActiveSection(id);
+        }
       },
-      { threshold: 0.5 } // 50% visible
+      {
+        threshold: [0.3, 0.5, 0.7],
+        rootMargin: '0px 0px -40% 0px'
+      }
     );
 
-    sections.forEach((section) => observer.observe(section));
-
+    sectionElements.forEach((section) => observer.observe(section));
     return () => observer.disconnect();
   }, []);
 
-  // Delay para transiciones suaves del texto grande
+  // Transición suave del título grande
   useEffect(() => {
     if (activeSection) {
-      setVisibleText(null); // Forzar salida
+      if (activeSection === visibleText) return;
+
+      setVisibleText(null);
       const timeout = setTimeout(() => {
         setVisibleText(activeSection);
-      }, 300); // sincronizado con la animación de salida
+      }, 300);
       return () => clearTimeout(timeout);
     }
   }, [activeSection]);
@@ -63,7 +71,6 @@ function Layout({ children }) {
       <main className="pt-32 px-6 lg:px-16 xl:px-24 max-w-[1600px] mx-auto space-y-32">
         {children}
       </main>
-
     </div>
   );
 }

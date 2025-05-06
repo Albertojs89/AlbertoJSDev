@@ -9,7 +9,7 @@ function App() {
     <Layout>
       <About />
       <Skills />
-      <Projects />
+      <section id="projects" className="observe-target"><Projects /></section>
       <Contact />
     </Layout>
   );

@@ -15,6 +15,9 @@ function Projects() {
       className="min-h-screen py-32 px-4 text-center mt-25"
       data-aos="fade-up"
     >
+      {/* Ancla de detección para móviles */}
+      <div id="projects-anchor" className="sr-only" aria-hidden="true"></div>
+
       <h2 className="text-3xl font-bold mb-12">Projects</h2>
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 justify-items-center w-full">
