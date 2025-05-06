@@ -39,13 +39,15 @@ function Contact() {
           <FaInstagram />
         </a>
         <a
-          href="/CV-Alberto.pdf"
-          download
-          className="hover:text-[#a0ffe6] transition-all"
-          title="Descargar CV"
-        >
-          <FaFileAlt />
-        </a>
+  href="/CV-Alberto.pdf"
+  download
+  className="flex flex-col items-center text-sm hover:text-[#a0ffe6] transition-all"
+  title="Descargar CV"
+>
+  <FaFileAlt className="text-3xl" />
+  <span className="mt-1">CV</span>
+</a>
+
       </div>
 
       <p className="mt-8 text-sm text-[#8892b0]">

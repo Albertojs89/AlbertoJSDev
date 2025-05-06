@@ -12,11 +12,11 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen py-32 px-4 text-center"
+      className="min-h-screen py-32 px-4 text-center mt-25"
       data-aos="fade-up"
     >
       <h2 className="text-3xl font-bold mb-12">Projects</h2>
-
+      
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 justify-items-center w-full">
         {/* Proyecto 1 */}
         <div className="flex flex-col items-center group w-full max-w-4xl">
@@ -160,6 +160,8 @@ function Projects() {
           </a>
         </div>
       </div>
+      <div className="h-[1px] bg-gradient-to-r from-transparent via-[#64ffda]/20 to-transparent my-16" />
+
     </section>
   );
 }

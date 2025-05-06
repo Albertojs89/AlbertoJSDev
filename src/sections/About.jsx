@@ -1,81 +1,74 @@
-import { useState } from 'react';
+import { FaLinkedin, FaGithub, FaInstagram, FaFileAlt } from 'react-icons/fa';
 
-function About() {
-  const [selected, setSelected] = useState('frontend'); // 'frontend' o 'creative'
-
+function Contact() {
   return (
     <section
-      id="about"
+      id="contact"
       className="min-h-screen py-32 px-4 flex flex-col items-center text-center"
       data-aos="fade-up"
     >
-      <h2 className="text-3xl font-bold mb-12">About Me</h2>
+      <h2 className="text-3xl font-bold mb-12">Contact</h2>
 
-      {/* Ilustraciones lado a lado más grandes y más juntas */}
-      <div className="flex flex-wrap gap-3 justify-center mb-6">
-        {/* Imagen Frontend */}
-        <div
-          onClick={() => setSelected('frontend')}
-          className="relative w-[300px] h-auto cursor-pointer transition-all duration-500"
+      <p className="text-lg text-[#ccd6f6] max-w-xl mb-8">
+        ¿Te interesa colaborar o tienes alguna pregunta? ¡No dudes en contactarme!
+      </p>
+
+      {/* Redes sociales */}
+      <div className="flex gap-8 text-3xl text-[#64ffda]">
+        {/* LinkedIn */}
+        <a
+          href="https://linkedin.com/in/tuusuario"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative group hover:text-[#a0ffe6] transition-all duration-300"
         >
-          <img
-            src="/sonriendo.png"
-            alt="Frontend"
-            className={`w-full h-full object-contain transition-all duration-500 ${
-              selected === 'creative' ? 'blur-sm grayscale' : 'blur-0'
-            }`}
-          />
-        </div>
+          <FaLinkedin />
+          <span className="absolute inset-0 pointer-events-none overflow-hidden">
+            <span className="shine-effect opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+          </span>
+        </a>
 
-        {/* Imagen Creativa */}
-        <div
-          onClick={() => setSelected('creative')}
-          className="relative w-[300px] h-auto cursor-pointer transition-all duration-500"
+        {/* GitHub */}
+        <a
+          href="https://github.com/tuusuario"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative group hover:text-[#a0ffe6] transition-all duration-300"
         >
-          <img
-            src="/pensando.png"
-            alt="Creative"
-            className={`w-full h-full object-contain transition-all duration-500 ${
-              selected === 'frontend' ? 'blur-sm grayscale' : 'blur-0'
-            }`}
-          />
-        </div>
-      </div>
+          <FaGithub />
+          <span className="absolute inset-0 pointer-events-none overflow-hidden">
+            <span className="shine-effect opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+          </span>
+        </a>
 
-      {/* Títulos animados con estilos distintos */}
-      <div className="h-12 mb-10 relative">
-        <h3
-          className={`absolute left-1/2 -translate-x-1/2 text-3xl font-bold text-[#64ffda] transition-all duration-500 ease-in-out ${
-            selected === 'frontend'
-              ? 'opacity-100 translate-y-0'
-              : 'opacity-0 -translate-y-2 pointer-events-none'
-          }`}
+        {/* Instagram */}
+        <a
+          href="https://instagram.com/tuusuario"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative group hover:text-[#a0ffe6] transition-all duration-300"
         >
-          Frontend Developer
-        </h3>
-        <h3
-          className={`absolute left-1/2 -translate-x-1/2 text-3xl font-bold text-[#64ffda] transition-all duration-500 ease-in-out ${
-            selected === 'creative'
-              ? 'opacity-100 translate-y-0'
-              : 'opacity-0 -translate-y-2 pointer-events-none'
-          }`}
+          <FaInstagram />
+          <span className="absolute inset-0 pointer-events-none overflow-hidden">
+            <span className="shine-effect opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+          </span>
+        </a>
+
+        {/* CV */}
+        <a
+          href="/cv.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative group hover:text-[#a0ffe6] transition-all duration-300"
         >
-          Creative Design
-        </h3>
-
-      </div>
-
-      {/* Texto descriptivo */}
-      <div className="max-w-2xl px-4">
-        <p className="text-lg mb-4 text-[#ccd6f6]">
-          Soy un desarrollador frontend con formación en UI/UX, y también me apasiona la ilustración como forma de comunicar ideas y conceptos visuales.
-        </p>
-        <p className="text-lg text-[#ccd6f6]">
-          Me gusta construir experiencias con alma, combinando código, diseño y creatividad.
-        </p>
+          <FaFileAlt />
+          <span className="absolute inset-0 pointer-events-none overflow-hidden">
+            <span className="shine-effect opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+          </span>
+        </a>
       </div>
     </section>
   );
 }
 
-export default About;
+export default Contact;

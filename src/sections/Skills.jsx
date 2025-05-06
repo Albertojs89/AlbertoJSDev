@@ -61,6 +61,8 @@ function Skills() {
           </div>
         ))}
       </div>
+      <div className="h-[1px] bg-gradient-to-r from-transparent via-[#64ffda]/20 to-transparent my-16" />
+
     </section>
   );
 }
