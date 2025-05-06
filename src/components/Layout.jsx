@@ -21,21 +21,16 @@ function Layout({ children }) {
     const sectionElements = document.querySelectorAll('section[id], #projects-anchor');
 
     const observer = new IntersectionObserver(
-      (entries) => {
-        const sorted = entries
-          .filter(entry => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-
-        if (sorted.length > 0) {
-          const id = sorted[0].target.id === 'projects-anchor' ? 'projects' : sorted[0].target.id;
-          setActiveSection(id);
-        }
-      },
-      {
-        threshold: [0.3, 0.5, 0.7],
-        rootMargin: '0px 0px -40% 0px'
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setActiveSection(entry.target.id);
       }
-    );
+    });
+  },
+  { threshold: 0.4 }
+);
+
 
     sectionElements.forEach((section) => observer.observe(section));
     return () => observer.disconnect();

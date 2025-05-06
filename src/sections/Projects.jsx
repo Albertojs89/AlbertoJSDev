@@ -12,9 +12,10 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen py-32 px-4 text-center mt-25"
+      className="min-h-screen pt-[9rem] pb-32 px-4 text-center"
       data-aos="fade-up"
     >
+
       {/* Ancla de detección para móviles */}
       <div id="projects-anchor" className="sr-only" aria-hidden="true"></div>
 
