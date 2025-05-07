@@ -17,7 +17,7 @@ function Projects() {
     >
 
       {/* Ancla de detección para móviles */}
-      <div id="projects-anchor" className="sr-only" aria-hidden="true"></div>
+      <div id="projects" className="sr-only" aria-hidden="true"></div>
 
       <h2 className="text-3xl font-bold mb-12">Projects</h2>
       
