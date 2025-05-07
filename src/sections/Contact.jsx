@@ -17,7 +17,7 @@ function Contact() {
       <div className="flex gap-8 text-3xl text-[#64ffda]">
         {/* LinkedIn */}
         <a
-          href="https://linkedin.com/in/tuusuario"
+          href="https://www.linkedin.com/in/alberto-jim%C3%A9nez-s%C3%A1nchez-5ab368211/?originalSubdomain=es"
           target="_blank"
           rel="noopener noreferrer"
           className="relative group hover:text-[#a0ffe6] transition-all duration-300"
@@ -30,7 +30,7 @@ function Contact() {
 
         {/* GitHub */}
         <a
-          href="https://github.com/tuusuario"
+          href="https://github.com/Albertojs89?tab=repositories"
           target="_blank"
           rel="noopener noreferrer"
           className="relative group hover:text-[#a0ffe6] transition-all duration-300"
@@ -43,7 +43,7 @@ function Contact() {
 
         {/* Instagram */}
         <a
-          href="https://instagram.com/tuusuario"
+          href="https://www.instagram.com/bitepixe/?igsh=MTVwdWNlbXVtc3I2MA%3D%3D&utm_source=qr#"
           target="_blank"
           rel="noopener noreferrer"
           className="relative group hover:text-[#a0ffe6] transition-all duration-300"
@@ -60,6 +60,8 @@ function Contact() {
           target="_blank"
           rel="noopener noreferrer"
           className="relative group hover:text-[#a0ffe6] transition-all duration-300"
+          alt='Curriculum Vitae'
+        download
         >
           <FaFileAlt />
           <span className="absolute inset-0 pointer-events-none overflow-hidden">

@@ -63,7 +63,7 @@ function Layout({ children }) {
         </h1>
       </div>
 
-      <main className="pt-32 px-6 lg:px-16 xl:px-24 max-w-[1600px] mx-auto space-y-32">
+      <main className="pt-5 px-6 lg:px-16 xl:px-24 max-w-[1600px] mx-auto space-y-32">
         {children}
       </main>
     </div>

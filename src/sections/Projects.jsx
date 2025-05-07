@@ -60,10 +60,11 @@ function Projects() {
           </p>
 
           <a
-            href="https://github.com/tuusuario/gestion-incidencias"
+            href="https://github.com/Albertojs89/XaviValverde"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 text-white text-2xl hover:text-[#64ffda] transition-colors"
+            alt='Github de Xavi Valverde'
           >
             <FaGithub />
           </a>
@@ -74,7 +75,7 @@ function Projects() {
           <div className="relative w-full max-w-[720px] overflow-visible cursor-pointer transition-all duration-500 group">
             <div className="absolute inset-0 -z-10 scale-105 rounded-2xl bg-[#64ffda] opacity-0 blur-2xl transition-all duration-500 group-hover:opacity-20" />
             <a
-              href="#"
+              href="https://portfolio-bite.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="block z-10 relative rounded-xl overflow-hidden"
@@ -108,10 +109,11 @@ function Projects() {
           </p>
 
           <a
-            href="https://github.com/tuusuario/gestor-incidencias"
+            href="https://github.com/Albertojs89/PortfolioBite"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 text-white text-2xl hover:text-[#64ffda] transition-colors"
+            alt='Github de Portfolio interactivo'
           >
             <FaGithub />
           </a>
@@ -122,7 +124,7 @@ function Projects() {
           <div className="relative w-full max-w-[720px] overflow-visible cursor-pointer transition-all duration-500 group">
             <div className="absolute inset-0 -z-10 scale-105 rounded-2xl bg-[#64ffda] opacity-0 blur-2xl transition-all duration-500 group-hover:opacity-20" />
             <a
-              href="#"
+              href="https://albertojs89.alwaysdata.net/BITEPIXE/index.php"
               target="_blank"
               rel="noopener noreferrer"
               className="block z-10 relative rounded-xl overflow-hidden"
@@ -155,10 +157,11 @@ function Projects() {
           </p>
 
           <a
-            href="https://github.com/tuusuario/gestor-incidencias"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 text-white text-2xl hover:text-[#64ffda] transition-colors"
+            alt='Github de Bitepixe'
           >
             <FaGithub />
           </a>
