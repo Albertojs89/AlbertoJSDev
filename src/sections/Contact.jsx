@@ -10,7 +10,7 @@ function Contact() {
       <h2 className="text-3xl font-bold mb-12">Contact</h2>
 
       <p className="text-lg text-[#ccd6f6] max-w-xl mb-8">
-        ¿Te interesa colaborar o tienes alguna pregunta? ¡No dudes en contactarme!
+        "Estoy siempre abierto a nuevas oportunidades y colaboraciones. Si tienes un proyecto en mente o simplemente quieres saludar, no dudes en contactarme. ¡Hablemos y creemos algo increíble juntos!"
       </p>
 
       {/* Redes sociales */}
@@ -21,6 +21,7 @@ function Contact() {
           target="_blank"
           rel="noopener noreferrer"
           className="relative group hover:text-[#a0ffe6] transition-all duration-300"
+          alt='LinkedIn'
         >
           <FaLinkedin />
           <span className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -30,10 +31,11 @@ function Contact() {
 
         {/* GitHub */}
         <a
-          href="https://github.com/Albertojs89?tab=repositories"
+          href="https://github.com/Albertojs89"
           target="_blank"
           rel="noopener noreferrer"
           className="relative group hover:text-[#a0ffe6] transition-all duration-300"
+          alt='GitHub'
         >
           <FaGithub />
           <span className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -47,6 +49,7 @@ function Contact() {
           target="_blank"
           rel="noopener noreferrer"
           className="relative group hover:text-[#a0ffe6] transition-all duration-300"
+          alt='Instagram'
         >
           <FaInstagram />
           <span className="absolute inset-0 pointer-events-none overflow-hidden">

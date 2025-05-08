@@ -52,7 +52,7 @@ function About() {
       {/* Títulos animados */}
       <div className="h-14 mb-10 relative">
         <h3
-          className={`absolute left-1/2 -translate-x-1/2 text-3xl font-semibold text-[#64ffda] transition-all duration-500 ease-in-out ${
+          className={`absolute left-1/2 -translate-x-1/2 text-3xl font-semibold text-[#64ffda] font-[Poppins] transition-all duration-500 ease-in-out ${
             selected === 'frontend'
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 -translate-y-2 pointer-events-none'

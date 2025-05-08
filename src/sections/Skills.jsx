@@ -38,7 +38,7 @@ function Skills() {
       className="min-h-screen py-32 px-4 text-center"
       data-aos="fade-up"
     >
-      <h2 className="text-3xl font-bold mb-12">Skills</h2>
+      <h2 className="text-3xl font-bold mb-12 font-[Poppins]">Skills</h2>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10">
 
