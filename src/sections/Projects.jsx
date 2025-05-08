@@ -5,6 +5,7 @@ import {
   FaCss3Alt,
   FaJs,
   FaHtml5,
+  FaInfoCircle,
 } from 'react-icons/fa';
 import { SiTailwindcss, SiVite, SiMysql, SiBootstrap } from 'react-icons/si';
 
@@ -59,15 +60,14 @@ function Projects() {
             Portfolio profesional de Xavi Valverde, maquillador y estilista profesional.
           </p>
 
-          <a
-            href="https://github.com/Albertojs89/XaviValverde"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 text-white text-2xl hover:text-[#64ffda] transition-colors"
-            alt='Github de Xavi Valverde'
-          >
-            <FaGithub />
-          </a>
+          <div className="flex gap-4 mt-4">
+            <a href="https://github.com/Albertojs89/XaviValverde" target="_blank" rel="noopener noreferrer" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
+              <FaGithub />
+            </a>
+            <a href="/project-detail/xavi-valverde" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
+              <FaInfoCircle />
+            </a>
+          </div>
         </div>
 
         {/* Proyecto 2 */}
@@ -108,15 +108,14 @@ function Projects() {
             Portal de noticias de videojuegos.
           </p>
 
-          <a
-            href="https://github.com/Albertojs89/PortfolioBite"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 text-white text-2xl hover:text-[#64ffda] transition-colors"
-            alt='Github de Portfolio interactivo'
-          >
-            <FaGithub />
-          </a>
+          <div className="flex gap-4 mt-4">
+            <a href="https://github.com/Albertojs89/PortfolioBite" target="_blank" rel="noopener noreferrer" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
+              <FaGithub />
+            </a>
+            <a href="/project-detail/portfolio-interactivo" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
+              <FaInfoCircle />
+            </a>
+          </div>
         </div>
 
         {/* Proyecto 3 */}
@@ -156,19 +155,16 @@ function Projects() {
             Portal de noticias de videojuegos.
           </p>
 
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 text-white text-2xl hover:text-[#64ffda] transition-colors"
-            alt='Github de Bitepixe'
-          >
-            <FaGithub />
-          </a>
+          <div className="flex gap-4 mt-4">
+            <a href="#" target="_blank" rel="noopener noreferrer" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
+              <FaGithub />
+            </a>
+            <a href="/project-detail/bitepixe" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
+              <FaInfoCircle />
+            </a>
+          </div>
         </div>
       </div>
-      <div className="h-[1px] bg-gradient-to-r from-transparent via-[#64ffda]/20 to-transparent my-16" />
-
     </section>
   );
 }
