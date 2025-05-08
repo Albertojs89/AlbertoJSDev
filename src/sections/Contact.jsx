@@ -7,7 +7,7 @@ function Contact() {
       className="min-h-screen py-32 px-4 flex flex-col items-center text-center"
       data-aos="fade-up"
     >
-      <h2 className="text-3xl font-bold mb-12">Contact</h2>
+      <h2 className="text-4xl font-bold mb-12">Contact</h2>
 
       <p className="text-lg text-[#ccd6f6] max-w-xl mb-8">
         "Estoy siempre abierto a nuevas oportunidades y colaboraciones. Si tienes un proyecto en mente o simplemente quieres saludar, no dudes en contactarme. ¡Hablemos y creemos algo increíble juntos!"

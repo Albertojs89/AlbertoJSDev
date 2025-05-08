@@ -19,7 +19,7 @@ function Projects() {
       {/* Ancla de detección para móviles */}
       <div id="projects" className="sr-only" aria-hidden="true"></div>
 
-      <h2 className="text-3xl font-bold mb-12">Projects</h2>
+      <h2 className="text-4xl font-bold mb-12">Projects</h2>
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 justify-items-center w-full">
         {/* Proyecto 1 */}
@@ -44,7 +44,7 @@ function Projects() {
           </div>
 
           <h3 className="mt-6 text-2xl lg:text-3xl font-semibold text-[#64ffda]">
-            Xavi Valverde | Make up Artist
+            Xavi Valverde | Make up Artist (en desarrollo)
           </h3>
 
           <div className="flex gap-4 mt-2 text-3xl text-white">
