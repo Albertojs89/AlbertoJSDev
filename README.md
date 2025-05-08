@@ -21,21 +21,7 @@ Este es mi portfolio web personal, diseñado y desarrollado para mostrar mis hab
 * "Contact" con enlaces a redes sociales y descarga de CV.
 * Diseño responsive para una experiencia óptima en móviles y escritorio.
 
-## 🚀 Instalación y Uso
 
-```bash
-# Clona el repositorio
- git clone [URL del repositorio]
-
-# Accede al directorio del proyecto
- cd portfolio-web
-
-# Instala las dependencias
- npm install
-
-# Inicia el proyecto en modo desarrollo
- npm run dev
-```
 
 ## 📁 Estructura del Proyecto
 
