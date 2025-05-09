@@ -96,7 +96,7 @@ function Projects() {
           </div>
 
           <h3 className="mt-6 text-2xl lg:text-3xl font-semibold text-[#64ffda]">
-            My Self | Portfolio interactivo (en desarrollo)
+            MySelf | Portfolio interactivo (en desarrollo)
           </h3>
 
           <div className="flex gap-4 mt-2 text-3xl text-white">
@@ -109,7 +109,7 @@ function Projects() {
           </div>
 
           <p className="mt-4 text-[#ccd6f6] text-base px-4">
-            Portal de noticias de videojuegos.
+          Myself es un portfolio interactivo que combina arte e ilustración con desarrollo web. A través de un entorno dinámico, los usuarios pueden explorar mi trayectoria, habilidades y proyectos de forma visual y envolvente. Desarrollado con React y CSS e ilustrado todo por mi, destaca por su enfoque creativo.
           </p>
 
           <div className="flex gap-4 mt-4">
@@ -156,7 +156,9 @@ function Projects() {
           </div>
 
           <p className="mt-4 text-[#ccd6f6] text-base px-4">
-            Portal de noticias de videojuegos.
+          BITEPIXE es una plataforma web de noticias de videojuegos, análisis y comunidad interactiva. Los usuarios pueden explorar contenido, dejar opiniones y recibir respuestas. Incluye sistema de usuarios, panel de administración y diseño adaptable.
+
+Perfecto para mostrar mis habilidades en desarrollo frontend y backend.
           </p>
 
           <div className="flex gap-4 mt-4">
