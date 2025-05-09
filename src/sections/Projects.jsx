@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import {
   FaReact,
   FaPhp,
@@ -57,16 +59,18 @@ function Projects() {
           </div>
 
           <p className="mt-4 text-[#ccd6f6] text-base px-4">
-            Portfolio profesional de Xavi Valverde, maquillador y estilista profesional.
+            Un portfolio visual y elegante para Xavi Valverde, maquillador y estilista profesional. Esta plataforma permite a los usuarios descubrir su trabajo, explorar su creatividad y contactar directamente para servicios de maquillaje y estilismo.
+
+
           </p>
 
           <div className="flex gap-4 mt-4">
             <a href="https://github.com/Albertojs89/XaviValverde" target="_blank" rel="noopener noreferrer" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
               <FaGithub />
             </a>
-            <a href="/project-detail/xavi-valverde" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
+            <Link to="/xavi-detalles" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
               <FaInfoCircle />
-            </a>
+            </Link>
           </div>
         </div>
 
