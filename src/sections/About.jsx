@@ -9,7 +9,7 @@ function About() {
       className="min-h-screen py-32 px-4 flex flex-col items-center text-center"
       data-aos="fade-up"
     >
-      <h2 className="text-4xl font-[Poppins] mb-12 text-[#64ffda]">About Me</h2>
+      <h2 className="text-4xl font-[Poppins] mb-12 text-[#ccd6f6]">About Me</h2>
 
       {/* Ilustraciones lado a lado más grandes y más juntas */}
       <div className="flex flex-wrap gap-3 justify-center mb-10 mt-4">

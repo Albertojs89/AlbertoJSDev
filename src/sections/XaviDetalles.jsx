@@ -1,9 +1,14 @@
-// XaviDetalles.jsx
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGithub } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGithub, FaArrowLeft, FaExternalLinkAlt } from 'react-icons/fa';
 import { SiTailwindcss, SiVite } from 'react-icons/si';
 
 function XaviDetalles() {
+  // Forzar scroll al inicio al cargar
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section className="min-h-screen py-16 px-4 text-center bg-[#131b24] text-[#ccd6f6]">
       <div className="max-w-4xl mx-auto space-y-12">
@@ -22,11 +27,8 @@ function XaviDetalles() {
         {/* Título y descripción */}
         <h1 className="text-4xl font-bold text-[#64ffda] mb-4">Xavi Valverde | Make up Artist</h1>
         <p className="text-lg max-w-3xl mx-auto">
-          El portfolio de Xavi Valverde es una plataforma visual diseñada para mostrar su trabajo en maquillaje y 
-          estilismo de manera elegante y minimalista. El diseño está enfocado en destacar su creatividad, 
-          permitiendo a los usuarios navegar fácilmente por sus proyectos.
-
-
+          Un portfolio visual y elegante para Xavi Valverde, maquillador y estilista profesional. 
+          Este proyecto refleja su creatividad y habilidades en el mundo del maquillaje.
         </p>
 
         {/* Tecnologías utilizadas */}
@@ -43,9 +45,8 @@ function XaviDetalles() {
         <div className="text-left max-w-3xl mx-auto space-y-6 mt-8">
           <h2 className="text-2xl font-semibold text-[#64ffda]">Descripción del Proyecto</h2>
           <p>
-            El objetivo de este proyecto fue crear un espacio visual donde Xavi pudiera mostrar su trabajo
-            como maquillador y estilista. El diseño está enfocado en una experiencia visual clara, que permita
-            a los usuarios explorar su trabajo de manera fluida.
+            Este proyecto es un portfolio visual y elegante para Xavi Valverde. Muestra su trabajo como maquillador
+            y estilista, permitiendo a los clientes explorar su creatividad y contactarlo fácilmente.
           </p>
 
           <h2 className="text-2xl font-semibold text-[#64ffda]">Objetivos del Proyecto</h2>
@@ -53,7 +54,6 @@ function XaviDetalles() {
             <li>Mostrar las habilidades y trabajos de Xavi Valverde.</li>
             <li>Permitir a los clientes contactarlo fácilmente.</li>
             <li>Destacar su trabajo visual mediante imágenes y videos.</li>
-            <li>Crear una experiencia visual fluida y clara.</li>
           </ul>
 
           <h2 className="text-2xl font-semibold text-[#64ffda]">Desafíos y Soluciones</h2>
@@ -69,27 +69,31 @@ function XaviDetalles() {
           </p>
         </div>
 
-        {/* Enlaces */}
+        {/* Enlaces visuales */}
         <div className="flex justify-center gap-6 mt-8">
-          <Link to="/" className="text-[#64ffda] underline hover:text-white transition-colors">
-            Volver a Portfolio
+          <Link 
+            to="/" 
+            className="flex items-center gap-2 text-white text-xl hover:text-[#64ffda] transition-colors"
+          >
+            <FaArrowLeft className="text-2xl" /> Volver al Portfolio
           </Link>
 
-          <a
-            href="https://xavi-valverde.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#64ffda] underline hover:text-white transition-colors"
+          <a 
+            href="https://xavi-valverde.vercel.app/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center gap-2 text-white text-xl hover:text-[#64ffda] transition-colors"
           >
-            Ver Proyecto en Vivo
+            <FaExternalLinkAlt className="text-2xl" /> Ver Proyecto en Vivo
           </a>
-          <a
-            href="https://github.com/Albertojs89/XaviValverde"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#64ffda] underline hover:text-white transition-colors"
+
+          <a 
+            href="https://github.com/Albertojs89/XaviValverde" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center gap-2 text-white text-xl hover:text-[#64ffda] transition-colors"
           >
-            Ver Código en GitHub
+            <FaGithub className="text-2xl" /> Código en GitHub
           </a>
         </div>
       </div>
