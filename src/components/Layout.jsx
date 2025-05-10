@@ -16,35 +16,35 @@ function Layout({ children }) {
     });
   }, []);
 
-  // IntersectionObserver mejorado para detectar secciones
+  // Observer para detectar qué sección está en el viewport
   useEffect(() => {
-    const sectionElements = document.querySelectorAll('section[id], #projects-anchor');
-
+    const sections = document.querySelectorAll('section[id]');
     const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        setActiveSection(entry.target.id);
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        threshold: 0.3, // Ajustamos el umbral para mejor detección
+        rootMargin: "0px 0px -30% 0px", // Mejoramos la detección para móviles
       }
-    });
-  },
-  { threshold: 0.4 }
-);
+    );
 
+    sections.forEach((section) => observer.observe(section));
 
-    sectionElements.forEach((section) => observer.observe(section));
     return () => observer.disconnect();
   }, []);
 
-  // Transición suave del título grande
+  // Delay para transiciones suaves del texto grande
   useEffect(() => {
     if (activeSection) {
-      if (activeSection === visibleText) return;
-
-      setVisibleText(null);
+      setVisibleText(null); // Forzar salida
       const timeout = setTimeout(() => {
         setVisibleText(activeSection);
-      }, 300);
+      }, 300); // sincronizado con la animación de salida
       return () => clearTimeout(timeout);
     }
   }, [activeSection]);
@@ -63,7 +63,7 @@ function Layout({ children }) {
         </h1>
       </div>
 
-      <main className="pt-5 px-6 lg:px-16 xl:px-24 max-w-[1600px] mx-auto space-y-32">
+      <main className="pt-32 px-6 lg:px-16 xl:px-24 max-w-[1600px] mx-auto space-y-32">
         {children}
       </main>
     </div>
