@@ -60,7 +60,7 @@ function About() {
               hovered === 'frontend' ? 'opacity-0' : 'opacity-100'
             }`}
           >
-            Creative Design
+            UX/UI Designer
           </span>
         </h3>
       </div>
