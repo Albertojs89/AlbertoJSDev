@@ -17,26 +17,26 @@ function Layout({ children }) {
   }, []);
 
   // Observer para detectar qué sección está en el viewport
-  useEffect(() => {
-    const sections = document.querySelectorAll('section[id]');
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      {
-        threshold: 0.3, // Ajustamos el umbral para mejor detección
-        rootMargin: "0px 0px -30% 0px", // Mejoramos la detección para móviles
-      }
-    );
+useEffect(() => {
+  const sections = document.querySelectorAll('section[id]');
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    },
+    {
+      threshold: 0.2, // Aumentamos la sensibilidad
+      rootMargin: "0px 0px -10% 0px", // Mejor detección en móviles
+    }
+  );
 
-    sections.forEach((section) => observer.observe(section));
+  sections.forEach((section) => observer.observe(section));
+  return () => observer.disconnect();
+}, []);
 
-    return () => observer.disconnect();
-  }, []);
 
   // Delay para transiciones suaves del texto grande
   useEffect(() => {
