@@ -59,7 +59,7 @@ function Contact() {
 
         {/* CV */}
         <a
-          href="/cv.pdf"
+          href="public/CV.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="relative group hover:text-[#a0ffe6] transition-all duration-300"
