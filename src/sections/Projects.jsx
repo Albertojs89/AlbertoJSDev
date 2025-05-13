@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import {
   FaReact,
   FaPhp,
@@ -5,6 +7,7 @@ import {
   FaCss3Alt,
   FaJs,
   FaHtml5,
+  FaInfoCircle,
 } from 'react-icons/fa';
 import { SiTailwindcss, SiVite, SiMysql, SiBootstrap } from 'react-icons/si';
 
@@ -19,7 +22,7 @@ function Projects() {
       {/* Ancla de detección para móviles */}
       <div id="projects" className="sr-only" aria-hidden="true"></div>
 
-      <h2 className="text-3xl font-bold mb-12">Projects</h2>
+      <h2 className="text-4xl font-bold mb-12">Projects</h2>
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 justify-items-center w-full">
         {/* Proyecto 1 */}
@@ -44,7 +47,7 @@ function Projects() {
           </div>
 
           <h3 className="mt-6 text-2xl lg:text-3xl font-semibold text-[#64ffda]">
-            Xavi Valverde | Make up Artist
+            Xavi Valverde | Make up Artist (en desarrollo)
           </h3>
 
           <div className="flex gap-4 mt-2 text-3xl text-white">
@@ -56,18 +59,19 @@ function Projects() {
           </div>
 
           <p className="mt-4 text-[#ccd6f6] text-base px-4">
-            Portfolio profesional de Xavi Valverde, maquillador y estilista profesional.
+            Un portfolio visual y elegante para Xavi Valverde, maquillador y estilista profesional. Esta plataforma permite a los usuarios descubrir su trabajo, explorar su creatividad y contactar directamente para servicios de maquillaje y estilismo.
+
+
           </p>
 
-          <a
-            href="https://github.com/Albertojs89/XaviValverde"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 text-white text-2xl hover:text-[#64ffda] transition-colors"
-            alt='Github de Xavi Valverde'
-          >
-            <FaGithub />
-          </a>
+          <div className="flex gap-4 mt-4">
+            <a href="https://github.com/Albertojs89/XaviValverde" target="_blank" rel="noopener noreferrer" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
+              <FaGithub />
+            </a>
+            <Link to="/xavi-detalles" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
+              <FaInfoCircle />
+            </Link>
+          </div>
         </div>
 
         {/* Proyecto 2 */}
@@ -92,7 +96,7 @@ function Projects() {
           </div>
 
           <h3 className="mt-6 text-2xl lg:text-3xl font-semibold text-[#64ffda]">
-            My Self | Portfolio interactivo (en desarrollo)
+            MySelf | Portfolio interactivo (en desarrollo)
           </h3>
 
           <div className="flex gap-4 mt-2 text-3xl text-white">
@@ -105,18 +109,17 @@ function Projects() {
           </div>
 
           <p className="mt-4 text-[#ccd6f6] text-base px-4">
-            Portal de noticias de videojuegos.
+          Myself es un portfolio interactivo que combina arte e ilustración con desarrollo web. A través de un entorno dinámico, los usuarios pueden explorar mi trayectoria, habilidades y proyectos de forma visual y envolvente. Desarrollado con React y CSS e ilustrado todo por mi, destaca por su enfoque creativo.
           </p>
 
-          <a
-            href="https://github.com/Albertojs89/PortfolioBite"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 text-white text-2xl hover:text-[#64ffda] transition-colors"
-            alt='Github de Portfolio interactivo'
-          >
-            <FaGithub />
-          </a>
+          <div className="flex gap-4 mt-4">
+            <a href="https://github.com/Albertojs89/PortfolioBite" target="_blank" rel="noopener noreferrer" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
+              <FaGithub />
+            </a>
+            <a href="/project-detail/portfolio-interactivo" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
+              <FaInfoCircle />
+            </a>
+          </div>
         </div>
 
         {/* Proyecto 3 */}
@@ -153,22 +156,21 @@ function Projects() {
           </div>
 
           <p className="mt-4 text-[#ccd6f6] text-base px-4">
-            Portal de noticias de videojuegos.
+          BITEPIXE es una plataforma web de noticias de videojuegos, análisis y comunidad interactiva. Los usuarios pueden explorar contenido, dejar opiniones y recibir respuestas. Incluye sistema de usuarios, panel de administración y diseño adaptable.
+
+Perfecto para mostrar mis habilidades en desarrollo frontend y backend.
           </p>
 
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 text-white text-2xl hover:text-[#64ffda] transition-colors"
-            alt='Github de Bitepixe'
-          >
-            <FaGithub />
-          </a>
+          <div className="flex gap-4 mt-4">
+            <a href="#" target="_blank" rel="noopener noreferrer" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
+              <FaGithub />
+            </a>
+            <a href="/project-detail/bitepixe" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
+              <FaInfoCircle />
+            </a>
+          </div>
         </div>
       </div>
-      <div className="h-[1px] bg-gradient-to-r from-transparent via-[#64ffda]/20 to-transparent my-16" />
-
     </section>
   );
 }
