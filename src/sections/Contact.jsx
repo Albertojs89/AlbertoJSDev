@@ -58,19 +58,23 @@ function Contact() {
         </a>
 
         {/* CV */}
-        <a
-          href="public/CV.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="relative group hover:text-[#a0ffe6] transition-all duration-300"
-          alt='Curriculum Vitae'
-        download
-        >
-          <FaFileAlt />
-          <span className="absolute inset-0 pointer-events-none overflow-hidden">
-            <span className="shine-effect opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-          </span>
-        </a>
+        <div className="flex flex-col items-center">
+          <a
+            href="/CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative group hover:text-[#a0ffe6] transition-all duration-300"
+            alt='Curriculum Vitae'
+            download
+          >
+            <FaFileAlt />
+            <span className="absolute inset-0 pointer-events-none overflow-hidden">
+              <span className="shine-effect opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+            </span>
+          </a>
+          <p className="text-base text-[#a0ffe6] mt-1">CV</p>
+        </div>
+        
       </div>
     </section>
   );
