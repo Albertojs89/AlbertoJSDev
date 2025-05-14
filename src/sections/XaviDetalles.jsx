@@ -36,7 +36,6 @@ function XaviDetalles() {
           <FaHtml5 className="text-orange-500" />
           <FaCss3Alt className="text-blue-500" />
           <FaJs className="text-yellow-300" />
-          <FaReact className="text-cyan-400" />
           <SiTailwindcss className="text-cyan-300" />
           <SiVite className="text-purple-400" />
         </div>

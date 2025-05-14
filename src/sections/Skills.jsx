@@ -14,6 +14,8 @@ import {
   SiVite,
   SiAdobeillustrator,
   SiAdobephotoshop,
+  SiNextdotjs,
+  SiOpenai,
 } from 'react-icons/si';
 
 function Skills() {
@@ -30,6 +32,8 @@ function Skills() {
     { icon: <FaFigma className="text-pink-500" />, label: 'Figma' },
     { icon: <FaGithub className="text-white" />, label: 'GitHub' },
     { icon: <FaPhp className="text-indigo-300" />, label: 'PHP' },
+    { icon: <SiNextdotjs className="text-black" />, label: 'Next.js' },
+    { icon: <SiOpenai className="text-green-500" />, label: 'ChatGPT' },
   ];
 
   return (
@@ -41,7 +45,6 @@ function Skills() {
       <h2 className="text-4xl font-bold mb-12 font-[Poppins]">Skills</h2>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10">
-
         {skills.map((skill, index) => (
           <div
             key={index}
@@ -62,7 +65,6 @@ function Skills() {
         ))}
       </div>
       <div className="h-[1px] bg-gradient-to-r from-transparent via-[#64ffda]/20 to-transparent my-16" />
-
     </section>
   );
 }

@@ -116,9 +116,9 @@ function Projects() {
             <a href="https://github.com/Albertojs89/PortfolioBite" target="_blank" rel="noopener noreferrer" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
               <FaGithub />
             </a>
-            <a href="/project-detail/portfolio-interactivo" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
+            <Link to="/myself-detalles" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
               <FaInfoCircle />
-            </a>
+            </Link>
           </div>
         </div>
 
