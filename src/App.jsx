@@ -7,6 +7,7 @@ import Contact from './sections/Contact';
 import XaviDetalles from './sections/XaviDetalles';
 import { Routes, Route } from 'react-router-dom';
 
+
 function App() {
   return (
     <Routes>
