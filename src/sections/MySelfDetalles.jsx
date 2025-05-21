@@ -108,13 +108,28 @@ function MySelfDetalles() {
             <li>Destacar su trabajo visual mediante imágenes, animaciones y efectos.</li>
           </ul>
 
-          <h2 className="text-2xl font-semibold text-[#64ffda]">Desafíos y Soluciones</h2>
-          <p>
-            El mayor desafío fue mantener un equilibrio entre la creatividad y la funcionalidad.
-            Quería que el portfolio fuera visualmente atractivo, pero también fácil de navegar.
-            Otro desafío ha sido cuadrar las animaciones e imagenes en el entorno y que funcione correctamente mientras se desplaza el usuario.
-            
-          </p>
+          <div className="space-y-4 text-left text-[15px] leading-relaxed">
+            <h3 className="text-xl font-bold text-[#64ffda]">🗓 Fecha prevista de finalización:</h3>
+            <p>20 de julio de 2025</p>
+
+            <h3 className="text-xl font-bold text-[#64ffda]">🚀 Últimos avances:</h3>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>
+                Aplicado movimiento del escenario con la <strong>rueda del ratón</strong> para conseguir una navegación más fluida y natural. Se abandona el uso de flechas por su desplazamiento demasiado brusco.
+              </li>
+              <li>
+                Iniciadas <strong>mejoras visuales en formato móvil</strong> para permitir una visualización correcta, aunque el proyecto sigue enfocado a escritorio.
+              </li>
+            </ul>
+
+            <h3 className="text-xl font-bold text-[#64ffda]">🔜 Próximos pasos:</h3>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Solucionar eventos según coordenadas exactas.</li>
+              <li>Corregir aparición del sprite (popping visual).</li>
+              <li>Aplicar nuevos eventos e interacciones dentro del escenario.</li>
+            </ul>
+          </div>
+
 
           <h2 className="text-2xl font-semibold text-[#64ffda]">Lecciones Aprendidas</h2>
           <p>

@@ -6,6 +6,7 @@ import Projects from './sections/Projects';
 import Contact from './sections/Contact';
 import XaviDetalles from './sections/XaviDetalles';
 import MyselfDetalles from './sections/MySelfDetalles';
+import GamesDetalles from './sections/GamesDetalles';
 import { Routes, Route } from 'react-router-dom';
 
 
@@ -24,6 +25,9 @@ function App() {
       {/* Ruta de detalles de proyecto Xavi */}
       <Route path="/xavi-detalles" element={<XaviDetalles />} />
       <Route path="/myself-detalles" element={<MyselfDetalles />} />
+      <Route path="/games-detalles" element={<GamesDetalles />} />
+
+      
     </Routes>
   );
 }

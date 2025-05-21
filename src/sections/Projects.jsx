@@ -157,17 +157,16 @@ function Projects() {
 
           <p className="mt-4 text-[#ccd6f6] text-base px-4">
           BITEPIXE es una plataforma web de noticias de videojuegos, análisis y comunidad interactiva. Los usuarios pueden explorar contenido, dejar opiniones y recibir respuestas. Incluye sistema de usuarios, panel de administración y diseño adaptable.
-
-Perfecto para mostrar mis habilidades en desarrollo frontend y backend.
+          Perfecto para mostrar mis habilidades en desarrollo frontend y backend.
           </p>
 
           <div className="flex gap-4 mt-4">
-            <a href="#" target="_blank" rel="noopener noreferrer" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
+            {/* <a href="#" target="_blank" rel="noopener noreferrer" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
               <FaGithub />
-            </a>
-            <a href="/project-detail/bitepixe" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
+            </a> */}
+            <Link to="/games-detalles" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
               <FaInfoCircle />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
