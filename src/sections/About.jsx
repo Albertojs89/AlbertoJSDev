@@ -5,10 +5,11 @@ function About() {
 
   return (
     <section
-      id="about"
-      className="min-h-screen py-32 px-4 flex flex-col items-center text-center"
-      data-aos="fade-up"
-    >
+  id="about"
+  className="min-h-screen py-32 px-4 flex flex-col items-center text-center mt-[-60px] lg:mt-[-100px] scroll-mt-32"
+  data-aos="fade-up"
+>
+
       <h2 className="text-4xl font-[Poppins] mb-12 text-[#ccd6f6]">About Me</h2>
 
       {/* Ilustraciones lado a lado más grandes y más juntas */}
