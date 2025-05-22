@@ -164,7 +164,7 @@ function MySelfDetalles() {
           </Link>
 
           <a 
-            href="https://portfolio-bite.vercel.app/" 
+            href="https://myself.albertojs.com/" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="flex items-center gap-2 text-white text-xl hover:text-[#64ffda] transition-colors"
