@@ -79,7 +79,7 @@ function Projects() {
           <div className="relative w-full max-w-[720px] overflow-visible cursor-pointer transition-all duration-500 group">
             <div className="absolute inset-0 -z-10 scale-105 rounded-2xl bg-[#64ffda] opacity-0 blur-2xl transition-all duration-500 group-hover:opacity-20" />
             <a
-              href="https://portfolio-bite.vercel.app/"
+              href="https://myself.albertojs.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="block z-10 relative rounded-xl overflow-hidden"
