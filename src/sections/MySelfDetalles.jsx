@@ -206,7 +206,7 @@ function MySelfDetalles() {
             <FaArrowLeft className="text-xl" />
           </Link>
           <a
-            href="https://xavi-valverde.vercel.app/"
+            href="https://myself.albertojs.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 bg-[#131b24]/80 backdrop-blur-sm rounded-full hover:text-[#64ffda] transition"
@@ -214,7 +214,7 @@ function MySelfDetalles() {
             <FaExternalLinkAlt className="text-xl" />
           </a>
           <a
-            href="https://github.com/Albertojs89/XaviValverde"
+            href="https://github.com/Albertojs89/MySelf"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 bg-[#131b24]/80 backdrop-blur-sm rounded-full hover:text-[#64ffda] transition"
