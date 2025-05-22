@@ -125,33 +125,75 @@ function GamesDetalles() {
           </div>
         )}
 
-        {/* Enlaces visuales */}
-        <div className="flex justify-center gap-6 mt-8">
-          <Link 
-            to="/" 
-            className="flex items-center gap-2 text-white text-xl hover:text-[#64ffda] transition-colors"
+        {/* Panel flotante en escritorio / barra inferior en móvil */}
+      
+      <div className="z-50 text-white text-sm md:text-base">
+        {/* Escritorio: panel flotante vertical */}
+        <div className="hidden sm:fixed sm:top-1/3 sm:right-5 sm:flex sm:flex-col sm:gap-5">
+          {/* Volver */}
+          <Link
+            to="/"
+            className="group flex items-center justify-end gap-2 px-2 py-1 rounded-md hover:text-[#64ffda] transition-all duration-300 bg-[#131b24]/70 backdrop-blur-sm"
           >
-            <FaArrowLeft className="text-2xl" /> Volver al Portfolio
+            <span className="hidden sm:inline opacity-0 group-hover:opacity-100 group-hover:translate-x-0 translate-x-2 transition-all duration-300">
+              Volver atrás
+            </span>
+            <FaArrowLeft className="text-[22px] md:text-[26px]" />
           </Link>
 
-          <a 
-            href="https://albertojs89.alwaysdata.net/BITEPIXE/index.php" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="flex items-center gap-2 text-white text-xl hover:text-[#64ffda] transition-colors"
+          {/* Ver proyecto */}
+          <a
+            href="https://xavi-valverde.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center justify-end gap-2 px-2 py-1 rounded-md hover:text-[#64ffda] transition-all duration-300 bg-[#131b24]/70 backdrop-blur-sm"
           >
-            <FaExternalLinkAlt className="text-2xl" /> Ver Proyecto en Vivo
+            <span className="hidden sm:inline opacity-0 group-hover:opacity-100 group-hover:translate-x-0 translate-x-2 transition-all duration-300">
+              Ver proyecto
+            </span>
+            <FaExternalLinkAlt className="text-[22px] md:text-[26px]" />
           </a>
 
-          {/* <a 
-            href="https://github.com/Albertojs89/XaviValverde" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="flex items-center gap-2 text-white text-xl hover:text-[#64ffda] transition-colors"
+          {/* GitHub */}
+          <a
+            href="https://github.com/Albertojs89/XaviValverde"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center justify-end gap-2 px-2 py-1 rounded-md hover:text-[#64ffda] transition-all duration-300 bg-[#131b24]/70 backdrop-blur-sm"
           >
-            <FaGithub className="text-2xl" /> Código en GitHub
-          </a> */}
+            <span className="hidden sm:inline opacity-0 group-hover:opacity-100 group-hover:translate-x-0 translate-x-2 transition-all duration-300">
+              GitHub
+            </span>
+            <FaGithub className="text-[22px] md:text-[26px]" />
+          </a>
         </div>
+
+        {/* Móvil: barra inferior fija con solo iconos */}
+        <div className="fixed bottom-2 left-0 right-0 mx-auto flex justify-center gap-6 sm:hidden">
+          <Link
+            to="/"
+            className="p-2 bg-[#131b24]/80 backdrop-blur-sm rounded-full hover:text-[#64ffda] transition"
+          >
+            <FaArrowLeft className="text-xl" />
+          </Link>
+          <a
+            href="https://xavi-valverde.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 bg-[#131b24]/80 backdrop-blur-sm rounded-full hover:text-[#64ffda] transition"
+          >
+            <FaExternalLinkAlt className="text-xl" />
+          </a>
+          <a
+            href="https://github.com/Albertojs89/XaviValverde"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 bg-[#131b24]/80 backdrop-blur-sm rounded-full hover:text-[#64ffda] transition"
+          >
+            <FaGithub className="text-xl" />
+          </a>
+        </div>
+      </div>
       </div>
     </section>
   );

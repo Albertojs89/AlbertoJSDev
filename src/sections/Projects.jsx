@@ -161,9 +161,9 @@ function Projects() {
           </p>
 
           <div className="flex gap-4 mt-4">
-            {/* <a href="#" target="_blank" rel="noopener noreferrer" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
+            <a href="#" target="_blank" rel="noopener noreferrer" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
               <FaGithub />
-            </a> */}
+            </a>
             <Link to="/games-detalles" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
               <FaInfoCircle />
             </Link>

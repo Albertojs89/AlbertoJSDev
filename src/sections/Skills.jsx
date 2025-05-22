@@ -20,20 +20,76 @@ import {
 
 function Skills() {
   const skills = [
-    { icon: <FaHtml5 className="text-orange-600" />, label: 'HTML5' },
-    { icon: <FaCss3Alt className="text-blue-500" />, label: 'CSS3' },
-    { icon: <FaJs className="text-yellow-400" />, label: 'JavaScript' },
-    { icon: <FaReact className="text-cyan-400" />, label: 'React' },
-    { icon: <FaBootstrap className="text-purple-600" />, label: 'Bootstrap' },
-    { icon: <SiTailwindcss className="text-cyan-300" />, label: 'Tailwind' },
-    { icon: <SiVite className="text-purple-400" />, label: 'Vite' },
-    { icon: <SiAdobephotoshop className="text-blue-400" />, label: 'Photoshop' },
-    { icon: <SiAdobeillustrator className="text-yellow-500" />, label: 'Illustrator' },
-    { icon: <FaFigma className="text-pink-500" />, label: 'Figma' },
-    { icon: <FaGithub className="text-white" />, label: 'GitHub' },
-    { icon: <FaPhp className="text-indigo-300" />, label: 'PHP' },
-    { icon: <SiNextdotjs className="text-black" />, label: 'Next.js' },
-    { icon: <SiOpenai className="text-green-500" />, label: 'ChatGPT' },
+    {
+      icon: <FaHtml5 className="text-orange-600" />,
+      label: 'HTML5',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
+    },
+    {
+      icon: <FaCss3Alt className="text-blue-500" />,
+      label: 'CSS3',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+    },
+    {
+      icon: <FaJs className="text-yellow-400" />,
+      label: 'JavaScript',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+    },
+    {
+      icon: <FaReact className="text-cyan-400" />,
+      label: 'React',
+      url: 'https://reactjs.org/',
+    },
+    {
+      icon: <FaBootstrap className="text-purple-600" />,
+      label: 'Bootstrap',
+      url: 'https://getbootstrap.com/',
+    },
+    {
+      icon: <SiTailwindcss className="text-cyan-300" />,
+      label: 'Tailwind',
+      url: 'https://tailwindcss.com/',
+    },
+    {
+      icon: <SiVite className="text-purple-400" />,
+      label: 'Vite',
+      url: 'https://vitejs.dev/',
+    },
+    {
+      icon: <SiAdobephotoshop className="text-blue-400" />,
+      label: 'Photoshop',
+      url: 'https://www.adobe.com/products/photoshop.html',
+    },
+    {
+      icon: <SiAdobeillustrator className="text-yellow-500" />,
+      label: 'Illustrator',
+      url: 'https://www.adobe.com/products/illustrator.html',
+    },
+    {
+      icon: <FaFigma className="text-pink-500" />,
+      label: 'Figma',
+      url: 'https://www.figma.com/',
+    },
+    {
+      icon: <FaGithub className="text-white" />,
+      label: 'GitHub',
+      url: 'https://github.com/',
+    },
+    {
+      icon: <FaPhp className="text-indigo-300" />,
+      label: 'PHP',
+      url: 'https://www.php.net/',
+    },
+    {
+      icon: <SiNextdotjs className="text-black" />,
+      label: 'Next.js',
+      url: 'https://nextjs.org/',
+    },
+    {
+      icon: <SiOpenai className="text-green-500" />,
+      label: 'ChatGPT',
+      url: 'https://openai.com/chatgpt',
+    },
   ];
 
   return (
@@ -55,9 +111,16 @@ function Skills() {
             {/* Halo luminoso */}
             <div className="absolute w-24 h-24 rounded-full bg-[#64ffda] opacity-0 blur-xl transition-all duration-500 group-hover:opacity-20" />
 
-            {/* Icono */}
+            {/* Icono con enlace */}
             <div className="relative z-10 flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24">
-              <div className="text-6xl">{skill.icon}</div>
+              <a
+                href={skill.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-6xl"
+              >
+                {skill.icon}
+              </a>
             </div>
 
             <p className="text-sm mt-3 text-[#ccd6f6] z-10">{skill.label}</p>
