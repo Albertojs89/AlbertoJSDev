@@ -172,7 +172,7 @@ function MySelfDetalles() {
 
           {/* Ver proyecto */}
           <a
-            href="https://xavi-valverde.vercel.app/"
+            href="https://myself.albertojs.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex items-center justify-end gap-2 px-2 py-1 rounded-md hover:text-[#64ffda] transition-all duration-300 bg-[#131b24]/70 backdrop-blur-sm"
@@ -185,7 +185,7 @@ function MySelfDetalles() {
 
           {/* GitHub */}
           <a
-            href="https://github.com/Albertojs89/XaviValverde"
+            href="https://github.com/Albertojs89/MySelf"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex items-center justify-end gap-2 px-2 py-1 rounded-md hover:text-[#64ffda] transition-all duration-300 bg-[#131b24]/70 backdrop-blur-sm"

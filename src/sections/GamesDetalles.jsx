@@ -177,7 +177,7 @@ function GamesDetalles() {
             <FaArrowLeft className="text-xl" />
           </Link>
           <a
-            href="https://xavi-valverde.vercel.app/"
+            href="https://albertojs89.alwaysdata.net/BITEPIXE/index.php"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 bg-[#131b24]/80 backdrop-blur-sm rounded-full hover:text-[#64ffda] transition"
@@ -185,7 +185,7 @@ function GamesDetalles() {
             <FaExternalLinkAlt className="text-xl" />
           </a>
           <a
-            href="https://github.com/Albertojs89/XaviValverde"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 bg-[#131b24]/80 backdrop-blur-sm rounded-full hover:text-[#64ffda] transition"
