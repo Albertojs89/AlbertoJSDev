@@ -1,4 +1,7 @@
 import { useEffect } from 'react';
+import '../assets/detalles.css';
+
+
 import { Link } from 'react-router-dom';
 import {
   FaHtml5,
@@ -17,7 +20,7 @@ function XaviDetalles() {
   }, []);
 
   return (
-    <section className="min-h-screen py-16 px-4 text-center bg-[#131b24] text-[#ccd6f6]">
+    <section className="min-h-screen py-16 px-4 text-center bg-[#131b24] text-[#ccd6f6] fondo-con-luz">
       <div className="max-w-4xl mx-auto space-y-12">
         {/* Video del proyecto */}
         <div className="relative w-full max-w-[720px] mx-auto mb-8 rounded-xl overflow-hidden shadow-lg group">
