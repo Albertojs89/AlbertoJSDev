@@ -14,19 +14,16 @@ function Contact() {
       </p>
 
       {/* Redes sociales */}
-      <div className="flex gap-8 text-3xl text-[#64ffda]">
+      
+      <div className="flex gap-8 text-3xl">
         {/* LinkedIn */}
         <a
           href="https://www.linkedin.com/in/alberto-jim%C3%A9nez-s%C3%A1nchez-5ab368211/?originalSubdomain=es"
           target="_blank"
           rel="noopener noreferrer"
-          className="relative group hover:text-[#a0ffe6] transition-all duration-300"
-          alt='LinkedIn'
+          alt="LinkedIn"
         >
-          <FaLinkedin />
-          <span className="absolute inset-0 pointer-events-none overflow-hidden">
-            <span className="shine-effect opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-          </span>
+          <FaLinkedin className="social-icon text-[#64ffda]" />
         </a>
 
         {/* GitHub */}
@@ -34,13 +31,9 @@ function Contact() {
           href="https://github.com/Albertojs89"
           target="_blank"
           rel="noopener noreferrer"
-          className="relative group hover:text-[#a0ffe6] transition-all duration-300"
-          alt='GitHub'
+          alt="GitHub"
         >
-          <FaGithub />
-          <span className="absolute inset-0 pointer-events-none overflow-hidden">
-            <span className="shine-effect opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-          </span>
+          <FaGithub className="social-icon text-[#64ffda]" />
         </a>
 
         {/* Instagram */}
@@ -48,13 +41,9 @@ function Contact() {
           href="https://www.instagram.com/bitepixe/?igsh=MTVwdWNlbXVtc3I2MA%3D%3D&utm_source=qr#"
           target="_blank"
           rel="noopener noreferrer"
-          className="relative group hover:text-[#a0ffe6] transition-all duration-300"
-          alt='Instagram'
+          alt="Instagram"
         >
-          <FaInstagram />
-          <span className="absolute inset-0 pointer-events-none overflow-hidden">
-            <span className="shine-effect opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-          </span>
+          <FaInstagram className="social-icon text-[#64ffda]" />
         </a>
 
         {/* CV */}
@@ -63,19 +52,15 @@ function Contact() {
             href="/CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative group hover:text-[#a0ffe6] transition-all duration-300"
-            alt='Curriculum Vitae'
+            alt="Curriculum Vitae"
             download
           >
-            <FaFileAlt />
-            <span className="absolute inset-0 pointer-events-none overflow-hidden">
-              <span className="shine-effect opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-            </span>
+            <FaFileAlt className="social-icon text-[#64ffda]" />
           </a>
           <p className="text-base text-[#a0ffe6] mt-1">CV</p>
         </div>
-        
       </div>
+
     </section>
   );
 }

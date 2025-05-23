@@ -25,7 +25,7 @@ function Sidebar({ setHoveredSection, activeSection }) {
             onClick={() => scrollTo(link.id)}
             onMouseEnter={() => setHoveredSection(link.label)}
             onMouseLeave={() => setHoveredSection(null)}
-            className={`relative pl-4 text-left group transition-colors duration-300 ${
+            className={`relative pl-4 text-left cursor-pointer group transition-colors duration-300 ${
               activeSection === link.id ? 'text-[#64ffda]' : 'hover:text-[#64ffda]'
             }`}
           >

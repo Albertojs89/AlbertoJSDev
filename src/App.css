@@ -51,19 +51,9 @@
   }
 }
 
-.shine-effect::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -75%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255, 255, 255, 0.4),
-    transparent
-  );
-  transform: skewX(-20deg);
-  animation: shine 1.2s ease-in-out;
+.social-icon {
+  transition: filter 0.3s ease, color 0.3s ease;
+}
+.social-icon:hover {
+  filter: brightness(3.4);
 }

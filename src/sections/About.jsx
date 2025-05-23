@@ -18,7 +18,7 @@ function About() {
         <div
           onMouseEnter={() => setHovered('frontend')}
           onMouseLeave={() => setHovered(null)}
-          className="relative w-[300px] h-auto cursor-pointer transition-all duration-500"
+          className="relative w-[300px] h-auto transition-all duration-500"
         >
           <img
             src="/sonriendo.png"
@@ -33,7 +33,7 @@ function About() {
         <div
           onMouseEnter={() => setHovered('creative')}
           onMouseLeave={() => setHovered(null)}
-          className="relative w-[300px] h-auto cursor-pointer transition-all duration-500"
+          className="relative w-[300px] h-auto transition-all duration-500"
         >
           <img
             src="/pensando.png"
