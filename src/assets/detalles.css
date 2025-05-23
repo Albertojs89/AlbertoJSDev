@@ -36,3 +36,19 @@
     transform: translateX(-50%);
   }
 }
+
+
+/* mas opacidad en mvl */
+
+@media (max-width: 768px) {
+  .fondo-con-luz::before {
+    background: linear-gradient(
+      120deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.12) 45%,
+      rgba(255, 255, 255, 0.12) 55%,
+      transparent 100%
+    );
+    filter: blur(10px);
+  }
+}
