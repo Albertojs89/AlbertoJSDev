@@ -116,8 +116,13 @@ function MySelfDetalles() {
             <h3 className="text-xl font-bold text-[#64ffda]">🚀 Últimos avances:</h3>
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                Aplicado movimiento del escenario con la <strong>rueda del ratón</strong> para conseguir una navegación más fluida y natural. Se abandona el uso de flechas por su desplazamiento demasiado brusco.
-              </li>
+                ✅ **Arreglo de animaciones de entrada y salida** para el mensaje de “Scroll to move”, con efectos de entrada y fade-out suave.  
+		✅ **Sustitución de icono** por uno creado manualmente con líneas blancas y fondo transparente, mejor integrado en la estética visual.  
+		✅ **Ajuste del tamaño y posición del texto** “Scroll to move” para que se vea más natural y legible en la interfaz.
+		✅ **Ajuste de posición en elementos eventuales (sprite).
+		✅ **Evento Skills-Projects-Contact.    
+		</li>
+		
               <li>
                 Iniciadas <strong>mejoras visuales en formato móvil</strong> para permitir una visualización correcta, aunque el proyecto sigue enfocado a escritorio.
               </li>
@@ -127,7 +132,8 @@ function MySelfDetalles() {
             <ul className="list-disc pl-6 space-y-2">
               <li>Solucionar eventos según coordenadas exactas.</li>
               <li>Corregir aparición del sprite (popping visual).</li>
-              <li>Aplicar nuevos eventos e interacciones dentro del escenario.</li>
+              <li>Retoque de ilustración en fondo fijo.</li>
+		<li>Sprite animado para evento de projectos.</li>
             </ul>
           </div>
 
