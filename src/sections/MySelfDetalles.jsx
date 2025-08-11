@@ -110,17 +110,20 @@ function MySelfDetalles() {
           </ul>
 
           <div className="space-y-4 text-left text-[15px] leading-relaxed">
-            <h3 className="text-xl font-bold text-[#64ffda]">🗓 Fecha prevista de finalización:</h3>
-            <p>20 de julio de 2025</p>
+            {/* <h3 className="text-xl font-bold text-[#64ffda]">🗓 Fecha prevista de finalización:</h3>
+            <p>20 de julio de 2025</p> */}
 
             <h3 className="text-xl font-bold text-[#64ffda]">🚀 Últimos avances:</h3>
             <ul className="list-disc pl-6 space-y-2">
               <li>
                 ✅ **Arreglo de animaciones de entrada y salida** para el mensaje de “Scroll to move”, con efectos de entrada y fade-out suave.  
-		✅ **Sustitución de icono** por uno creado manualmente con líneas blancas y fondo transparente, mejor integrado en la estética visual.  
-		✅ **Ajuste del tamaño y posición del texto** “Scroll to move” para que se vea más natural y legible en la interfaz.
-		✅ **Ajuste de posición en elementos eventuales (sprite).
-		✅ **Evento Skills-Projects-Contact.    
+                ✅ **Sustitución de icono** por uno creado manualmente con líneas blancas y fondo transparente, mejor integrado en la estética visual.  
+                ✅ **Ajuste del tamaño y posición del texto** “Scroll to move” para que se vea más natural y legible en la interfaz.
+                ✅ **Ajuste de posición en elementos eventuales (sprite).
+                ✅ **Evento Skills-Projects-Contact. 
+                ✅ **Evento Projectos con animación.
+                ✅ **Evento Contacto con formulario.
+                ✅ **Incorporación de barra de navegación, simulación de desplazamiento.
 		</li>
 		
               <li>
@@ -131,9 +134,9 @@ function MySelfDetalles() {
             <h3 className="text-xl font-bold text-[#64ffda]">🔜 Próximos pasos:</h3>
             <ul className="list-disc pl-6 space-y-2">
               <li>Solucionar eventos según coordenadas exactas.</li>
-              <li>Corregir aparición del sprite (popping visual).</li>
+              <li>Adaptación responsive en la medida de lo posible</li>
               <li>Retoque de ilustración en fondo fijo.</li>
-		<li>Sprite animado para evento de projectos.</li>
+		
             </ul>
           </div>
 

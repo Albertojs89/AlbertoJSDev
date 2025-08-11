@@ -7,6 +7,7 @@ import Contact from './sections/Contact';
 import XaviDetalles from './sections/XaviDetalles';
 import MyselfDetalles from './sections/MySelfDetalles';
 import GamesDetalles from './sections/GamesDetalles';
+import CandoDetalles from './sections/CandoDetalles';
 import { Routes, Route } from 'react-router-dom';
 
 
@@ -28,6 +29,7 @@ function App() {
       <Route path="/xavi-detalles" element={<XaviDetalles />} />
       <Route path="/myself-detalles" element={<MyselfDetalles />} />
       <Route path="/games-detalles" element={<GamesDetalles />} />
+      <Route path="/cando-detalles" element={<CandoDetalles />} />
 
       
     </Routes>
