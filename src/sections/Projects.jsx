@@ -32,7 +32,7 @@ function Projects() {
               className="block z-10 relative rounded-xl overflow-hidden"
             >
               <video
-                src="/videos/proyecto1.mp4"
+                src="/videos/candovideo.mp4"
                 autoPlay
                 loop
                 muted
@@ -65,9 +65,9 @@ function Projects() {
             {/* <a href="https://github.com/Albertojs89/XaviValverde" target="_blank" rel="noopener noreferrer" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
               <FaGithub />
             </a> */}
-            <a href="https://xavi-valverde.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
+            {/* <a href="CandoApp" target="_blank" rel="noopener noreferrer" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
               <FaExternalLinkAlt />
-            </a>
+            </a> */}
           </div>
         </div>
 
@@ -138,7 +138,7 @@ function Projects() {
           </div>
 
           <h3 className="mt-6 text-2xl lg:text-3xl font-semibold text-[#64ffda]">
-            MySelf | Portfolio interactivo (en desarrollo)
+            MySelf | Portfolio interactivo 
           </h3>
 
           <div className="flex gap-4 mt-2 text-3xl text-white">
