@@ -266,7 +266,6 @@ function CanDoDetalles() {
           <div className="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-md flex items-center justify-center z-50">
             <div className="relative flex flex-col items-center gap-6">
               <img src={selectedImage} alt="Ampliada" className="max-w-[90vw] max-h-[70vh] rounded-lg shadow-2xl" />
-              <img src="/images/bd.png" alt="Esquema BD" className="max-w-[90vw] max-h-[20vh] rounded-lg shadow-lg border border-[#64ffda]/40 bg-white" />
               <button
                 className="absolute top-4 right-4 text-white text-3xl bg-[#828383] p-2 rounded-full hover:bg-[#3e4140] transition"
                 onClick={closeImage}
