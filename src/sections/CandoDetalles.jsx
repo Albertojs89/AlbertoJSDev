@@ -1,5 +1,5 @@
 // src/pages/CanDoDetalles.jsx
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { FaReact, FaGithub, FaArrowLeft, FaExternalLinkAlt, FaHtml5, FaCss3Alt, FaJs } from 'react-icons/fa';
 import { SiTailwindcss, SiSupabase, SiFigma, SiAdobeillustrator } from 'react-icons/si';
@@ -7,6 +7,13 @@ import '../assets/detalles.css';
 
 function CanDoDetalles() {
   const [selectedImage, setSelectedImage] = useState(null);
+  // Estados para zoom y pan solo para la imagen de BD
+  const [zoom, setZoom] = useState(1);
+  const [offset, setOffset] = useState({ x: 0, y: 0 });
+  const [dragging, setDragging] = useState(false);
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+  const [imgStart, setImgStart] = useState({ x: 0, y: 0 });
+  const imgRef = useRef(null);
 
   // [MANTENIDO] Forzamos scroll al inicio
   useEffect(() => {
@@ -22,8 +29,47 @@ function CanDoDetalles() {
     "/images/candoimg5.jpg"
   ];
 
-  const openImage = (src) => setSelectedImage(src);
-  const closeImage = () => setSelectedImage(null);
+  const openImage = (src) => {
+    setSelectedImage(src);
+    setZoom(1);
+    setOffset({ x: 0, y: 0 });
+  };
+  const closeImage = () => {
+    setSelectedImage(null);
+    setZoom(1);
+    setOffset({ x: 0, y: 0 });
+  };
+
+  // Permitir zoom y pan en la imagen de BD y en la de diseño
+  const isZoomable = selectedImage === '/images/bd.png' || selectedImage === '/images/design.jpg';
+
+  // Zoom con rueda del ratón
+  const handleWheel = (e) => {
+    if (!isZoomable) return;
+    e.preventDefault();
+    let newZoom = zoom + (e.deltaY < 0 ? 0.15 : -0.15);
+    newZoom = Math.max(1, Math.min(newZoom, 4));
+    setZoom(newZoom);
+  };
+
+  // Pan con arrastre
+  const handleMouseDown = (e) => {
+    if (!isZoomable || zoom === 1) return;
+    setDragging(true);
+    setDragStart({ x: e.clientX, y: e.clientY });
+    setImgStart({ ...offset });
+  };
+  const handleMouseMove = (e) => {
+    if (!isZoomable || !dragging) return;
+    setOffset({
+      x: imgStart.x + (e.clientX - dragStart.x),
+      y: imgStart.y + (e.clientY - dragStart.y),
+    });
+  };
+  const handleMouseUp = () => {
+    if (!isZoomable) return;
+    setDragging(false);
+  };
 
   return (
     <section className="min-h-screen py-16 px-4 text-center bg-[#131b24] text-[#ccd6f6] fondo-con-luz">
@@ -133,13 +179,18 @@ function CanDoDetalles() {
   {/* TIP: aquí podrás añadir más adelante una mini‑infografía o un GIF del flujo. */}
 </div>
 
-{/* [SECCIÓN] Diseño, Usabilidad y Accesibilidad */}
+{/* [SECCIÓN] Diseño, Usabilidad y Accesibilidad  -----------------------------------*/}
+
+ {/* Línea divisoria decorativa */}
+      <div className="w-full flex justify-center my-12">
+        <div className="h-[1px] w-2/3 bg-gradient-to-r from-[#64ffda] via-[#233554] to-[#64ffda] rounded-full opacity-70 shadow-md"></div>
+      </div>
 <div className="text-left max-w-3xl mx-auto space-y-5 mt-8">
-  <h2 className="text-2xl font-semibold text-[#64ffda]">Diseño, Usabilidad y Accesibilidad</h2>
+  <h2 className="text-4xl font-semibold text-[#64ffda]">Diseño, Usabilidad y Accesibilidad</h2>
 
   {/* Diseño: tus decisiones visuales y porqués */}
   <div className="space-y-2">
-    <h3 className="text-xl font-bold flex items-center gap-2">
+    <h3 className="text-xl font-bold flex items-center gap-2 text-[#e6f7ff]">
       Diseño (mi adaptación)
       <SiFigma title="Figma" className="text-pink-500 text-2xl" />
       <SiAdobeillustrator title="Illustrator" className="text-orange-600 text-2xl" />
@@ -154,7 +205,7 @@ function CanDoDetalles() {
 
   {/* Usabilidad: cómo simplificas decisiones y fricción */}
   <div className="space-y-2">
-    <h3 className="text-xl font-bold">Usabilidad</h3>
+  <h3 className="text-xl font-bold text-[#e6f7ff]">Usabilidad</h3>
     <ul className="list-disc pl-6 space-y-2">
       <li><strong>Registro en 2 pasos</strong> (líder → perro) para reducir abandono.</li>
       <li><strong>Registro diario en 1–2 min</strong>, con navegación tipo carrusel y huellas táctiles.</li>
@@ -165,7 +216,7 @@ function CanDoDetalles() {
 
   {/* Accesibilidad: decisiones con sentido práctico */}
   <div className="space-y-2">
-    <h3 className="text-xl font-bold">Accesibilidad</h3>
+  <h3 className="text-xl font-bold text-[#e6f7ff]">Accesibilidad</h3>
     <ul className="list-disc pl-6 space-y-2">
       <li><strong>Contraste</strong> suficiente en textos y botones (paleta validada sobre #131b24).</li>
       <li><strong>Targets táctiles ≥ 44px</strong> en controles (huellas, botones, iconos).</li>
@@ -177,14 +228,140 @@ function CanDoDetalles() {
 
   {/* Nota legal/privacidad para la demo pública */}
   <div className="space-y-2">
-    <h3 className="text-xl font-bold">Privacidad y demo</h3>
+    {/* <h3 className="text-xl font-bold">Privacidad y demo</h3>
     <p>
       La demo pública utiliza datos ficticios y controles de acceso. El repositorio permanece privado 
       y se comparte bajo solicitud para proteger propiedad intelectual.
-    </p>
+    </p> */}
   </div>
+
+
+    {/* ============== [PASO 4] PROCESO DE DISEÑO (FIGMA) ============== */}
+
+
+    <div className="space-y-3 mt-8">
+      <h3 className="text-xl font-bold text-[#e6f7ff]">Proceso de diseño (Figma)</h3>
+      <p>
+        Este es el <strong>prototipo inicial de diseño</strong> creado en Figma para definir el flujo guiado de pantallas: desde el onboarding, el registro en 2 pasos y la creación de plan centrada en problemas reales, hasta el dashboard principal. Este prototipo ha servido como base para el desarrollo y se ha ido <strong>mejorando progresivamente</strong> en aspectos clave de <strong>usabilidad</strong>, <strong>accesibilidad</strong> y <strong>diseño</strong> a medida que avanzaba el proyecto, adaptando la experiencia a las necesidades reales de los usuarios.
+      </p>
+
+      {/* Imagen Figma clicable → usa tu modal existente */}
+      <div className="relative group cursor-pointer">
+        <img
+          src="/images/design.jpg"
+          alt="Storyboard de Figma: onboarding, registro, creación de plan y dashboard de CanDo"
+          loading="lazy"
+          className="w-full rounded-xl transition-transform duration-300 transform group-hover:scale-105 shadow-lg"
+          onClick={() => openImage('/images/design.jpg')}
+        />
+        <p className="mt-2 text-sm text-[#a6b3c4]">
+          Storyboard de diseño en Figma: de bienvenida a dashboard (mobile-first).
+        </p>
+      </div>
+ {/* Línea divisoria decorativa */}
+      <div className="w-full flex justify-center my-12">
+        <div className="h-[1px] w-2/3 bg-gradient-to-r from-[#64ffda] via-[#233554] to-[#64ffda] rounded-full opacity-70 shadow-md"></div>
+      </div>
+      {/* ILUSTRACIONES CREADAS ---------🎨🎨 */}
+
+      <div className="mt-8">
+        <h2 className="text-2xl font-semibold text-[#64ffda] text-center mb-8">Ilustraciones creadas</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-10 max-w-3xl mx-auto">
+          <div className="flex flex-col items-center justify-center">
+            <div className="relative group cursor-pointer w-full flex justify-center">
+              <img
+                src="/images/first_register.png"
+                alt="Ilustración medalla"
+                className="w-full h-64 object-cover rounded-xl transition-transform duration-300 transform group-hover:scale-105 shadow-lg"
+                onClick={() => openImage('/images/first_register.png', 'Diseño de la medalla inicial.')}
+              />
+            </div>
+            <p className="mt-2 text-sm text-[#a6b3c4] text-center">Diseño de la medalla inicial.</p>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <div className="relative group cursor-pointer w-full flex justify-center">
+              <img
+                src="/images/loading.png"
+                alt="Ilustración perro loading"
+                className="w-full h-64 object-cover rounded-xl transition-transform duration-300 transform group-hover:scale-105 shadow-lg"
+                onClick={() => openImage('/images/loading.png', 'Ilustración de perro en algunas pantallas de carga')}
+              />
+            </div>
+            <p className="mt-2 text-sm text-[#a6b3c4] text-center">Ilustración de perro en algunas pantallas de carga</p>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <div className="relative group cursor-pointer w-full flex justify-center">
+              <img
+                src="/images/tutorial2.png"
+                alt="Ilustración tutorial planes"
+                className="w-full h-64 object-cover rounded-xl transition-transform duration-300 transform group-hover:scale-105 shadow-lg"
+                onClick={() => openImage('/images/tutorial2.png', 'Ilustración de sistema de planes en el tutorial.')}
+              />
+            </div>
+            <p className="mt-2 text-sm text-[#a6b3c4] text-center">Ilustración de sistema de planes en el tutorial.</p>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <div className="relative group cursor-pointer w-full flex justify-center">
+              <img
+                src="/images/tutorial3.png"
+                alt="Ilustración tutorial registro"
+                className="w-full h-64 object-cover rounded-xl transition-transform duration-300 transform group-hover:scale-105 shadow-lg"
+                onClick={() => openImage('/images/tutorial3.png', 'Ilustración del registro en el tutorial.')}
+              />
+            </div>
+            <p className="mt-2 text-sm text-[#a6b3c4] text-center">Ilustración del registro en el tutorial.</p>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <div className="relative group cursor-pointer w-full flex justify-center">
+              <img
+                src="/images/sevendays.png"
+                alt="Ilustración medalla de 7 días"
+                className="w-full h-64 object-cover rounded-xl transition-transform duration-300 transform group-hover:scale-105 shadow-lg"
+                onClick={() => openImage('/images/sevendays.png', 'Ilustración de medalla de 7 días.')}
+              />
+            </div>
+            <p className="mt-2 text-sm text-[#a6b3c4] text-center">Ilustración de medalla de 7 días.</p>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <div className="relative group cursor-pointer w-full flex justify-center">
+              <img
+                src="/images/tutorial6.png"
+                alt="Ilustración tutorial logros y medallas"
+                className="w-full h-64 object-cover rounded-xl transition-transform duration-300 transform group-hover:scale-105 shadow-lg"
+                onClick={() => openImage('/images/tutorial6.png', 'Ilustración de logros y medallas en el tutorial.')}
+              />
+            </div>
+            <p className="mt-2 text-sm text-[#a6b3c4] text-center">Ilustración de logros y medallas en el tutorial.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* FIN BLOQUE DE IMAGENES ILUSTRACIONES */}
+
+      
+
+      {/* Puntos clave del diseño (breve y accionable) */}
+      <ul className="mt-20 list-disc pl-6 space-y-2">
+        <li><strong>Onboarding</strong>: educa en 20–30 s; reduce dudas y rebote inicial.</li>
+        <li><strong>Diseño amigable y agradable</strong>: campos intuitivos y bien espaciados. Dando especial atención al detalle visual y la jerarquía de la información.</li>
+        <li><strong>Crear plan</strong>: problemas predefinidos → objetivos automáticos y comprensibles.</li>
+        <li><strong>Dashboard</strong>: foco en progreso, medallas y CTA de “Registrar día”.</li>
+        <li><strong>Microcopy</strong> y <strong>accesibilidad</strong>: contraste, targets ≥ 44px y foco visible.</li>
+      </ul>
+
+      {/* Línea divisoria decorativa */}
+      <div className="w-full flex justify-center my-12">
+        <div className="h-[1px] w-2/3 bg-gradient-to-r from-[#64ffda] via-[#233554] to-[#64ffda] rounded-full opacity-70 shadow-md"></div>
+      </div>
+
+      {/*  Enlace al archivo Figma  */}
+      {/* <a href="" target="_blank" rel="noopener noreferrer" className="text-[#64ffda] underline">
+            Ver diseño en Figma
+          </a> */}
+    </div>
+    {/* ============ [FIN PASO 4] PROCESO DE DISEÑO (FIGMA) ============ */}
 </div>
-{/* ==================== [FIN PASO 2] BLOQUES NUEVOS ==================== */}
+
 
 
 {/* ====================== [PASO 3] ARQUITECTURA / BD ====================== */}
@@ -204,24 +381,15 @@ function CanDoDetalles() {
 
   {/* Mini‑galería de 2 imágenes: arquitectura general + esquema de tablas */}
   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
-    {/* Imagen 1: arquitectura general */}
-    <div className="relative group cursor-pointer">
-      <img
-        src="/images/estructura.png" // <- Copia previa a /public/images/estructura.png
-        alt="Arquitectura general del proyecto CanDo (frontend React, backend Supabase, flujos principales)"
-        className="w-full h-64 object-cover rounded-xl transition-transform duration-300 transform group-hover:scale-105 shadow-lg"
-        onClick={() => openImage('/images/estructura.png')}
-      />
-      <p className="mt-2 text-sm text-[#a6b3c4]">Arquitectura general: flujo UI → servicios → BD</p>
-    </div>
+    
 
     {/* Imagen 2: esquema de BD Supabase */}
     <div className="relative group cursor-pointer">
       <img
-        src="/images/bd.png" // <- Renombrado desde el SVG original
-        alt="Esquema de tablas en Supabase para CanDo (users, dogs, plans, goals, daily_entries, daily_responses, medals, medals_obtained)"
-        className="w-full h-64 object-cover rounded-xl transition-transform duration-300 transform group-hover:scale-105 shadow-lg bg-white"
-        onClick={() => openImage('/images/supabase-schema.svg')}
+  src="/images/bd.png" // 
+  alt="Esquema de tablas en Supabase para CanDo (users, dogs, plans, goals, daily_entries, daily_responses, medals, medals_obtained)"
+  className="w-full h-64 object-cover rounded-xl transition-transform duration-300 transform group-hover:scale-105 shadow-lg bg-white"
+  onClick={() => openImage('/images/bd.png')}
       />
       <p className="mt-2 text-sm text-[#a6b3c4]">Esquema de datos en Supabase con relaciones y claves foráneas</p>
     </div>
@@ -241,14 +409,11 @@ function CanDoDetalles() {
         <code>daily_responses</code> según los objetivos activos.
       </li>
       <li>
-        <strong>Medallas separadas</strong>: <code>medals</code> (catálogo) y 
+        <strong>Medallas separadas</strong>: <code>medals</code> (catálogo) y  
         <code>medals_obtained</code> (histórico por perro/plan/fecha) permiten mostrar logros inmediatos 
         y acumulativos, y consultarlos por cronología o tipo.
       </li>
-      <li>
-        <strong>Demo segura</strong>: datos ficticios en el entorno público y repositorio privado con acceso 
-        bajo solicitud, protegiendo la propiedad intelectual.
-      </li>
+      
     </ul>
   </div>
 
@@ -263,9 +428,38 @@ function CanDoDetalles() {
 
         {/* [MANTENIDO] Modal de imagen ampliada */}
         {selectedImage && (
-          <div className="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-md flex items-center justify-center z-50">
+          <div 
+            className="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-md flex items-center justify-center z-50 select-none"
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUp}
+            onMouseLeave={handleMouseUp}
+          >
             <div className="relative flex flex-col items-center gap-6">
-              <img src={selectedImage} alt="Ampliada" className="max-w-[90vw] max-h-[70vh] rounded-lg shadow-2xl" />
+              <img
+                ref={imgRef}
+                src={selectedImage}
+                alt="Ampliada"
+                className={`max-w-[90vw] max-h-[70vh] rounded-lg shadow-2xl ${isZoomable ? 'cursor-grab' : ''}`}
+                style={isZoomable ? {
+                  transform: `scale(${zoom}) translate(${offset.x / zoom}px, ${offset.y / zoom}px)`,
+                  transition: dragging ? 'none' : 'transform 0.2s',
+                  cursor: dragging ? 'grabbing' : (zoom > 1 ? 'grab' : 'zoom-in'),
+                } : {}}
+                onWheel={handleWheel}
+                onMouseDown={handleMouseDown}
+                draggable={false}
+              />
+              {isZoomable && zoom > 1 && (
+                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-[#222d3a] bg-opacity-80 text-[#64ffda] px-3 py-1 rounded text-xs shadow">Arrastra para mover. Doble click para resetear.</div>
+              )}
+              {isZoomable && (
+                <button
+                  className="absolute bottom-2 right-2 text-white text-base bg-[#828383] px-3 py-1 rounded hover:bg-[#3e4140] transition"
+                  onClick={() => { setZoom(1); setOffset({ x: 0, y: 0 }); }}
+                >
+                  Reset zoom
+                </button>
+              )}
               <button
                 className="absolute top-4 right-4 text-white text-3xl bg-[#828383] p-2 rounded-full hover:bg-[#3e4140] transition"
                 onClick={closeImage}
