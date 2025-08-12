@@ -172,7 +172,7 @@ function CanDoDetalles() {
     <li><strong>Registro</strong> del líder y alta del perro (nombre, edad, raza, avatar opcional).</li>
     <li><strong>Crear plan</strong>: eliges problemas (tirones, reactividad, ansiedad…).</li>
     <li><strong>Objetivos automáticos</strong> según los problemas marcados.</li>
-    <li><strong>Dashboard</strong>: objetivos en curso, barras de progreso y botón “Registrar día”.</li>
+    <li><strong>Dashboard</strong>: objetivos en curso, calendario con días registrados, para visualizar otros registros y botón “Registrar día”. Medallas conseguidas y en progreso, sección de albúm y reels.</li>
     <li><strong>Registrar día</strong>: 1–5 huellas por pregunta + comentario opcional.</li>
     <li><strong>Recompensas</strong>: medallas inmediatas y acumulativas; resumen semanal y mensual (roadmap).</li>
   </ol>
