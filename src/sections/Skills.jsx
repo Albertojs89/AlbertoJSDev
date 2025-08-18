@@ -16,6 +16,8 @@ import {
   SiAdobephotoshop,
   SiNextdotjs,
   SiOpenai,
+  SiSupabase,
+  SiGithubcopilot,
 } from 'react-icons/si';
 
 function Skills() {
@@ -81,6 +83,11 @@ function Skills() {
       url: 'https://www.php.net/',
     },
     {
+      icon: <SiSupabase className="text-green-500" />,
+      label: 'Supabase',
+      url: 'https://supabase.com/',
+    },
+    {
       icon: <SiNextdotjs className="text-black" />,
       label: 'Next.js',
       url: 'https://nextjs.org/',
@@ -89,6 +96,11 @@ function Skills() {
       icon: <SiOpenai className="text-green-500" />,
       label: 'ChatGPT',
       url: 'https://openai.com/chatgpt',
+    },
+    {
+      icon: <SiGithubcopilot className="text-[#64ffda]" />,
+      label: 'Copilot',
+      url: 'https://github.com/features/copilot',
     },
   ];
 

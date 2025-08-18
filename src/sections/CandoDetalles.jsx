@@ -88,10 +88,20 @@ function CanDoDetalles() {
           />
         </div>
 
+        
+
         {/*  Título y descripción breve para CanDo */}
-        <h1 className="text-4xl font-bold text-[#64ffda] mb-4">
-          CanDo — Planes y progreso para educar a tu perro
-        </h1>
+        <div className="flex flex-col items-center justify-center mt-2 mb-2">
+          <img
+            src="images/iconCando.png"
+            alt="Icono CanDo"
+            className="w-18 h-18 object-contain mb-6 rounded-2xl"
+            style={{ verticalAlign: 'middle' }}
+          />
+          <h1 className="text-4xl font-bold text-[#64ffda] mb-4">
+            CanDo <br></br> "Planes y progreso para educar a tu perro"
+          </h1>
+        </div>
         <p className="text-lg max-w-3xl mx-auto">
           <strong>CanDo</strong> te acompaña en la educación de tu perro con consejos reales de educadores,
           planes personalizados, <em>registro diario</em> y un sistema de recompensas que motiva el avance.
@@ -429,7 +439,7 @@ function CanDoDetalles() {
         {/* [MANTENIDO] Modal de imagen ampliada */}
         {selectedImage && (
           <div 
-            className="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-md flex items-center justify-center z-50 select-none"
+            className="animate-pop fixed inset-0 bg-opacity-80 backdrop-blur-md flex items-center justify-center z-50 select-none"
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
             onMouseLeave={handleMouseUp}
@@ -439,7 +449,7 @@ function CanDoDetalles() {
                 ref={imgRef}
                 src={selectedImage}
                 alt="Ampliada"
-                className={`max-w-[90vw] max-h-[70vh] rounded-lg shadow-2xl ${isZoomable ? 'cursor-grab' : ''}`}
+                className={`max-w-[90vw] max-h-[70vh]   ${isZoomable ? 'cursor-grab' : ''}`}
                 style={isZoomable ? {
                   transform: `scale(${zoom}) translate(${offset.x / zoom}px, ${offset.y / zoom}px)`,
                   transition: dragging ? 'none' : 'transform 0.2s',
@@ -489,7 +499,7 @@ function CanDoDetalles() {
 
             {/* Ver proyecto (DEMO en producción) */}
             <a
-              href="https://cando.tu-dominio.com" // TODO: reemplaza por tu deploy real
+              href="https://cando.albertojs.com/" // TODO: reemplaza por tu deploy real
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center justify-end gap-2 px-2 py-1 rounded-md hover:text-[#64ffda] transition-all duration-300 bg-[#131b24]/70 backdrop-blur-sm"

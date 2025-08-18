@@ -42,7 +42,13 @@ function Projects() {
             </Link>
           </div>
 
-          <h3 className="mt-6 text-2xl lg:text-3xl font-semibold text-[#64ffda]">
+          <h3 className="mt-6 text-2xl lg:text-3xl font-semibold text-[#64ffda] flex items-center justify-center gap-3">
+            <img
+              src="images/iconCando.png"
+              alt="Icono CanDo"
+              className="w-9 h-9 object-contain inline-block rounded"
+              style={{ verticalAlign: 'middle' }}
+            />
             CanDo | Dog Training & Progress Tracker
           </h3>
 
@@ -65,9 +71,9 @@ function Projects() {
             {/* <a href="https://github.com/Albertojs89/XaviValverde" target="_blank" rel="noopener noreferrer" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
               <FaGithub />
             </a> */}
-            {/* <a href="CandoApp" target="_blank" rel="noopener noreferrer" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
+            <a href="https://cando.albertojs.com/" target="_blank" rel="noopener noreferrer" className="text-white text-2xl hover:text-[#64ffda] transition-colors">
               <FaExternalLinkAlt />
-            </a> */}
+            </a>
           </div>
         </div>
 
